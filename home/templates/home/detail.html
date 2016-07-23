@@ -1,0 +1,48 @@
+<img src="{{ user.photo }}"/>
+
+<h1>{{ user.name }}</h1>
+<h3>{{ user.address }}</h3>
+
+{% if error_message %}
+    <p><strong>{{ error_message }}</strong></p>
+{% endif %}
+<form action="{% url 'home:married' user.id %}" method="post">
+    {% csrf_token %}
+    {% for user in user.individual_set.all %}
+        <input type="radio" id="user {{ forloop.counter }}" name="user" value="{{ user.id }}">
+        <label for="user {{ forloop.counter }}">
+            {{ user.name }}
+            {% if user.is_married %}
+                <img src="http://orig01.deviantart.net/b536/f/2012/037/4/5/gold_star_icon_by_midnight_flame-d4oxfby.png">
+            {% endif %}
+        <br>
+        </label>
+        {% endfor %}
+    <input type="submit" value="Wed!">
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

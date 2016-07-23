@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="Django default" uuid="94293a7f-b1d9-46f5-9402-4f39faa0a7cb">
+      <user-name>george</user-name>
+      <introspection-scope>jora_webdb:pg_catalog,public</introspection-scope>
+      <resolve-scope>jora_webdb:public</resolve-scope>
+    </data-source>
+  </component>
+</project>
