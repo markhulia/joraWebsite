@@ -5,9 +5,9 @@
 {% load staticfiles %}
 <!--                 keyword 'static' references the folder /static-->
 <link rel="stylesheet" type="text/css" href="{% static 'home/css/bootstrap.min.css' %}">
-
 <!-- Custom CSS -->
 <link rel="stylesheet" href="{% static 'home/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'home/css/scrolling-nav.css' %}">
 
 <head>
     <!-- Required meta tags always come first -->
@@ -18,36 +18,73 @@
 </head>
 
 
-<body>
+{#<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">#}
+{##}
+{#<nav class="navbar  navbar-dark bg-inverse navbar-fixed-top">#}
+{#    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#myNavbar">#}
+{#        &#9776;#}
+{#    </button>#}
+{#    <div class="collapse navbar-toggleable-xs" id="myNavbar">#}
+{#        <a class="navbar-brand" href="{% url 'home:index' %} }"><strong>G.M. Dev</strong></a>#}
+{#        <ul class="nav navbar-nav pull-sm-right">#}
+{##}
+{#            <li class="nav-item active">#}
+{#                <a class="page-scroll" href="#page-top">Home<span class="sr-only">(current)</span></a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#                <a class="page-scroll" href="#portfolio">Portfolio</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#                <a class="page-scroll" href="#about">About</a>#}
+{#            </li>#}
+{#            <li class="nav-item">#}
+{#                <a class="nav-link" href="#">Contact</a>#}
+{#            </li>#}
+{##}
+{#            <li class="nav-item">#}
+{#                <a class="btn btn-primaryn" href="#"></a>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </div>#}
+{#</nav>#}
 
-<!-- Navbar -->
-<nav class="navbar  navbar-dark bg-inverse navbar-fixed-top">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#myNavbar">
-        &#9776;
-    </button>
-    <a class="navbar-brand" href="#"><strong>G.M. Dev</strong></a>
-    <div class="collapse navbar-toggleable-xs" id="myNavbar">
-        <ul class="nav navbar-nav pull-sm-right">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
-            </li>
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
+            </div>
 
-            {#            <li class="nav-item">#}
-            {#                <a class="btn btn-primaryn" href="#"></a>#}
-            {#            </li>#}
-        </ul>
-    </div>
-</nav>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav">
+                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
+                    <li class="hidden">
+                        <a class="page-scroll" href="#page-top"></a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">Services</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
 
 
 <div id="stage">
@@ -58,5 +95,111 @@
     </div>
 </div>
 
+<section id="feature-one">
+    <div class="container">
+        <div class="row">
+            <div class="feature-content">
+                <div class="col-lg-6">
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/21WlKHQe5CU" frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="col-lg-5 col-lg-offset-1">
+                    <h6>Watch this</h6>
+                    <h2>Witness the powe of Startup.logo in this video</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="portfolio" class="feature-dark">
+    <div class="container">
+        <div class="row">
+            <div class="feature-content">
+                <div class="col-lg-6 feature-caption">
+                    <h6>Incredible feature</h6>
+                    <h2>Totally random website</h2>
+                    <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure olor</p>
+                    <a href="#" role="button" class="btn btn-secondary-outline btn-lg">Get in on the action</a>
+                </div>
+                <div class="col-lg-6 text-sm-center hidden-md-down">
+                    <img src="http://www.androidpolice.com/wp-content/uploads/2014/04/nexusae0_bugdroid.png"
+                         alt="android">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{#<section id="feature-three">#}
+{#    <div class="container">#}
+{#        <div class="row">#}
+{#            <div class="feature-content">#}
+{#                <div class="col-lg-6">#}
+{#                    <h6>Kudos</h6>#}
+{#                    <blockquote class="blockquote">#}
+{#                        &ldquo; No Startup.logo, no kiss &rdquo;#}
+{#                        <footer class="blockquote-footer">#}
+{#                            Brelvis, <cite>some random guy</cite>#}
+{#                        </footer>#}
+{#                    </blockquote>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </div>#}
+{#</section>#}
+
+<footer id="main-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                &copy; 2016 G.M. Dev <br>
+                Coded by George Markhulia
+            </div>
+            <div class="col-md-2">
+                <h6>Our product</h6>
+                <ul class="list-unstyled">
+                    <li><a href="">Features</a></li>
+                    <li><a href="">Solutions</a></li>
+                    <li><a href="">Plans</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>Our Team</h6>
+                <ul class="list-unstyled">
+                    <li><a href="">About</a></li>
+                    <li><a href="">Investors</a></li>
+                    <li><a href="">Partners</a></li>
+                </ul>
+            </div>
+            <div class="col-md-2">
+                <h6>Other</h6>
+                <ul class="list-unstyled">
+                    <li><a href="">Jobs</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
